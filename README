@@ -1,0 +1,13 @@
+=============README EXAMPLE==============
+modified gogoCLIENT v1.2-RELEASE
+
+edited from gogoc-1_2-RELEASE.tar.gz 
+to the version could be cross compiled
+
+ins :  ( make project in gogoc-tsp/ )
+make cleanall  (not make clean)
+make all CROSS_COMPILE=mipsel-linux- 
+     OPENSSL_INCDIR=/path/to/tomatoraf/release/src-rt/router/openssl/include 
+     CRYPTO_LIBDIR=/path/to/tomatoraf/release/src-rt/router/openssl
+
+===============README EOF==================
