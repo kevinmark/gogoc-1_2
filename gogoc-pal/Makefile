@@ -25,10 +25,12 @@ OUT_INC_DIR   :=$(PWD)/out_inc
 LIB_NAME      :=libgogocpal.a
 GOGOCPAL_LIB   :=${OUT_LIB_DIR}/${LIB_NAME}
 PLATFORM      :=$(shell [ -z "$(platform)" ] && uname | tr "[A-Z]" "[a-z]" || echo "$(platform)" )
+EXTRA_CFLAGS  :=$(CFLAGSALL)
 
 SUPPORTED_PLATFORMS=linux netbsd freebsd openbsd darwin sunos gogocpe
 CC=$(CROSS_COMPILE)gcc
 
+CFLAGS=$(EXTRA_CFLAGS)
 
 # Export these variables to sub-makes.
 export PLATFORM PLATFORM_DIR OBJS_DIR DEFS_DIR OUT_INC_DIR CC DEBUG

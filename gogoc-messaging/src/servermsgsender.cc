@@ -15,6 +15,7 @@
 // **************************************************************************
 #include <gogocmessaging/servermsgsender.h>
 #include <assert.h>
+#include <stddef.h>
 
 
 namespace gogocmessaging

@@ -15,6 +15,7 @@
 // **************************************************************************
 #include <gogocmessaging/clientmsgsender.h>
 #include <assert.h>
+#include <stddef.h>
 
 
 namespace gogocmessaging
@@ -142,6 +143,7 @@ void ClientMsgSender::Send_BrokerListRequest( void )
 void ClientMsgSender::Send_HACCESSConfigInfo( const HACCESSConfigInfo* aHACCESSCfgInfo )
 {
   Message* pMsg;
+  printf("$d", MSG_HEADER_LEN);
   uint8_t pData[MSG_MAX_USERDATA];
   uint32_t nDataLen = 0;
 
